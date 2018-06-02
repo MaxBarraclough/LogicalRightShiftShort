@@ -129,7 +129,7 @@ public final class LogicalRightShiftShort {
 
         final int rightShifted_Int = inputMasked_Int >>> shiftBy;
         // Doesn't matter if we use >> or >>>
-        // Trivia: just about all CPUs have instructions for both
+        // Trivia: Even the PDP-8 has instructions for both operators!
 
 
         short ret = (short)rightShifted_Int;
