@@ -118,8 +118,10 @@ public final class LogicalRightShiftShort {
         // 4. Convert back to short
         // 5. Return
 
-        // It's vital that we mask *before* the shift, so that we shift a zero
+        // It's vital that we mask *before* the shift, so that we always shift a zero
         // into the 16'th bit (which becomes the M.S.B. of the output short)
+	// regardless of the sign of the input short.
+	// (We could have done the mask after the shift, and masked off 17 bits.)
 
         final int input_Int = (int)input;
 
